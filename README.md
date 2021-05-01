@@ -13,7 +13,7 @@ No compatibility is intended or wanted.
 # Status
 
 Early stage not started with porting,
-EXPIRMENTAL, NOT FIT FOR PRODUCTION.
+EXPERIMENTAL, NOT FIT FOR PRODUCTION.
 
 # License
 
