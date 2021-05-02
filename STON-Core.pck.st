@@ -1,10 +1,10 @@
-'From Cuis 5.0 [latest update: #4579] on 2 May 2021 at 12:50:52 pm'!
+'From Cuis 5.0 [latest update: #4579] on 2 May 2021 at 8:14:35 pm'!
 'Description The STON-Core needed for tonel, is a special object notation (serialization format) for Smalltalk, which looks like JSON.
 
 Author: The pharo team
 License: MIT
 '!
-!provides: 'STON-Core' 1 1!
+!provides: 'STON-Core' 1 3!
 SystemOrganization addCategory: 'STON-Core'!
 SystemOrganization addCategory: 'STON-Core-Tests'!
 
@@ -49,8 +49,28 @@ Error subclass: #STONWriterError
 STONWriterError class
 	instanceVariableNames: ''!
 
+!classDefinition: #STONFileReference category: 'STON-Core'!
+FileEntry subclass: #STONFileReference
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'STON-Core'!
+!classDefinition: 'STONFileReference class' category: 'STON-Core'!
+STONFileReference class
+	instanceVariableNames: ''!
+
+!classDefinition: #STONTestCase category: 'STON-Core-Tests'!
+TestCase subclass: #STONTestCase
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'STON-Core-Tests'!
+!classDefinition: 'STONTestCase class' category: 'STON-Core-Tests'!
+STONTestCase class
+	instanceVariableNames: ''!
+
 !classDefinition: #STONCStyleCommentsSkipStreamTest category: 'STON-Core-Tests'!
-TestCase subclass: #STONCStyleCommentsSkipStreamTest
+STONTestCase subclass: #STONCStyleCommentsSkipStreamTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
@@ -60,7 +80,7 @@ STONCStyleCommentsSkipStreamTest class
 	instanceVariableNames: ''!
 
 !classDefinition: #STONJSONTest category: 'STON-Core-Tests'!
-TestCase subclass: #STONJSONTest
+STONTestCase subclass: #STONJSONTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
@@ -70,7 +90,7 @@ STONJSONTest class
 	instanceVariableNames: ''!
 
 !classDefinition: #STONReaderTest category: 'STON-Core-Tests'!
-TestCase subclass: #STONReaderTest
+STONTestCase subclass: #STONReaderTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
@@ -79,18 +99,18 @@ TestCase subclass: #STONReaderTest
 STONReaderTest class
 	instanceVariableNames: ''!
 
-!classDefinition: #STONTest category: 'STON-Core-Tests'!
-TestCase subclass: #STONTest
+!classDefinition: #STONSingletonTest category: 'STON-Core-Tests'!
+STONTestCase subclass: #STONSingletonTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'STON-Core-Tests'!
-!classDefinition: 'STONTest class' category: 'STON-Core-Tests'!
-STONTest class
+!classDefinition: 'STONSingletonTest class' category: 'STON-Core-Tests'!
+STONSingletonTest class
 	instanceVariableNames: ''!
 
 !classDefinition: #STONWriteReadTest category: 'STON-Core-Tests'!
-TestCase subclass: #STONWriteReadTest
+STONTestCase subclass: #STONWriteReadTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
@@ -140,43 +160,13 @@ STONWriteReadCommentsTest class
 	instanceVariableNames: ''!
 
 !classDefinition: #STONWriterTest category: 'STON-Core-Tests'!
-TestCase subclass: #STONWriterTest
+STONTestCase subclass: #STONWriterTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'STON-Core-Tests'!
 !classDefinition: 'STONWriterTest class' category: 'STON-Core-Tests'!
 STONWriterTest class
-	instanceVariableNames: ''!
-
-!classDefinition: #FileReference category: 'STON-Core'!
-Object subclass: #FileReference
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	category: 'STON-Core'!
-!classDefinition: 'FileReference class' category: 'STON-Core'!
-FileReference class
-	instanceVariableNames: ''!
-
-!classDefinition: #STONFileReference category: 'STON-Core'!
-FileReference subclass: #STONFileReference
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	category: 'STON-Core'!
-!classDefinition: 'STONFileReference class' category: 'STON-Core'!
-STONFileReference class
-	instanceVariableNames: ''!
-
-!classDefinition: #Path category: 'STON-Core'!
-Object subclass: #Path
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	category: 'STON-Core'!
-!classDefinition: 'Path class' category: 'STON-Core'!
-Path class
 	instanceVariableNames: ''!
 
 !classDefinition: #STON category: 'STON-Core'!
@@ -279,46 +269,6 @@ Object subclass: #STONWriter
 STONWriter class
 	instanceVariableNames: ''!
 
-!classDefinition: #ScaledDecimal category: 'STON-Core'!
-Object subclass: #ScaledDecimal
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	category: 'STON-Core'!
-!classDefinition: 'ScaledDecimal class' category: 'STON-Core'!
-ScaledDecimal class
-	instanceVariableNames: ''!
-
-!classDefinition: #SmallDictionary category: 'STON-Core'!
-Object subclass: #SmallDictionary
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	category: 'STON-Core'!
-!classDefinition: 'SmallDictionary class' category: 'STON-Core'!
-SmallDictionary class
-	instanceVariableNames: ''!
-
-!classDefinition: #ZnMimeType category: 'STON-Core'!
-Object subclass: #ZnMimeType
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	category: 'STON-Core'!
-!classDefinition: 'ZnMimeType class' category: 'STON-Core'!
-ZnMimeType class
-	instanceVariableNames: ''!
-
-!classDefinition: #ZnUrl category: 'STON-Core'!
-Object subclass: #ZnUrl
-	instanceVariableNames: ''
-	classVariableNames: ''
-	poolDictionaries: ''
-	category: 'STON-Core'!
-!classDefinition: 'ZnUrl class' category: 'STON-Core'!
-ZnUrl class
-	instanceVariableNames: ''!
-
 !classDefinition: #STONTestDomainObject category: 'STON-Core-Tests'!
 Object subclass: #STONTestDomainObject
 	instanceVariableNames: 'created modified integer float description color tags bytes boolean'
@@ -386,6 +336,11 @@ STONReaderError is the error/exception signalled by STONReader when illegal/inco
 !STONWriterError commentStamp: '' prior: 0!
 STONWriterError is the error/exception signalled by STONWriter when illegal/incorrect input is seen. !
 
+!STONFileReference commentStamp: '' prior: 0!
+I am STONFileReference, I am an implementation artifact to help reading objects with class tag equal to my #stonName.
+
+I am a FileReference.!
+
 !STONJSONTest commentStamp: '' prior: 0!
 STONJSONTests contains unit tests for the JSON functionality available in STON.!
 
@@ -393,7 +348,7 @@ STONJSONTests contains unit tests for the JSON functionality available in STON.!
 STONReaderTests test materialization.
 !
 
-!STONTest commentStamp: '' prior: 0!
+!STONSingletonTest commentStamp: '' prior: 0!
 STONTests tests the API offered by STON.
 !
 
@@ -408,11 +363,6 @@ STONWritePrettyPrinterReadTests tests pretty printed serialization followed by m
 
 !STONWriterTest commentStamp: '' prior: 0!
 STONWriterTests test serialization.!
-
-!STONFileReference commentStamp: '' prior: 0!
-I am STONFileReference, I am an implementation artifact to help reading objects with class tag equal to my #stonName.
-
-I am a FileReference.!
 
 !STON commentStamp: '' prior: 0!
 STON implements serialization and materialization using the Smalltalk Object Notation format.
@@ -750,76 +700,14 @@ STONTestUser3 extends STONTestUser but wants nil instance variables to be writte
 stonName
 	^ #TestMap! !
 
-!FileReference methodsFor: '*ston-core'!
-stonContainSubObjects
-	^ false! !
-
-!FileReference methodsFor: '*ston-core'!
-stonOn: stonWriter
-	self fileSystem isDiskFileSystem
-		ifTrue: [ | diskFilePath |
-			"in order to get $/ as delimiter and $. as working directory on all platforms"
-			diskFilePath _ path isWorkingDirectory
-				ifTrue: [ '.' ]
-				ifFalse: [ path pathString ].
-			stonWriter 
-				writeObject: self 
-				named: STONFileReference stonName 
-				listSingleton: diskFilePath ]
-		ifFalse: [ 
-			super stonOn: stonWriter ]! !
-
 !STONFileReference class methodsFor: 'ston'!
 stonName
 	^ #FILE! !
-
-!Path methodsFor: '*ston-core'!
-stonOn: stonWriter
-	stonWriter 
-		writeObject: self 
-		streamShortList: [ :listWriter | 
-			self do: [ :each | listWriter add: each ] ]! !
 
 !STONReference methodsFor: 'printing'!
 printOn: stream
 	super printOn: stream.
 	stream nextPut: $(; print: index; nextPut: $)! !
-
-!ScaledDecimal methodsFor: '*ston-core'!
-stonOn: stonWriter
-	stonWriter writeScaledDecimal: self! !
-
-!SmallDictionary methodsFor: '*ston-core'!
-stonOn: stonWriter
-	"I store my instances as maps"
-	
-	stonWriter 
-		writeObject: self 
-		do: [ stonWriter encodeMap: self ]! !
-
-!ZnMimeType class methodsFor: '*ston-core'!
-stonName
-	^ #MimeType! !
-
-!ZnMimeType methodsFor: '*ston-core'!
-stonContainSubObjects
-	^ false! !
-
-!ZnMimeType methodsFor: '*ston-core'!
-stonOn: stonWriter
-	stonWriter writeObject: self listSingleton: self asString ! !
-
-!ZnUrl class methodsFor: '*ston-core'!
-stonName
-	^ #URL! !
-
-!ZnUrl methodsFor: '*ston-core'!
-stonContainSubObjects
-	^ false! !
-
-!ZnUrl methodsFor: '*ston-core'!
-stonOn: stonWriter
-	stonWriter writeObject: self listSingleton: self asString ! !
 
 !STONTestDomainObject class methodsFor: 'ston-core'!
 stonName
@@ -930,13 +818,13 @@ classTreeExtended: topClass
 		eachInfo at: #subclasses put: (eachClass subclasses collect: [ :subClass | map at: subClass ]) ].
 	^ map at: topClass! !
 
-!STONReaderError methodsFor: 'accessing'!
+!STONReaderError methodsFor: 'accessing' stamp: 'jpb 5/2/2021 19:55:25'!
 messageText
 	^ streamPosition 
 		ifNil: [ 
 			super messageText ] 
 		ifNotNil: [ :pos | 
-			'At character <1P>: <2P>' expandMacrosWith: pos with: super messageText ]! !
+			'At character ', pos asString , ' : ' , super messageText ]! !
 
 !STONReaderError methodsFor: 'accessing'!
 streamPosition
@@ -953,7 +841,17 @@ signal: aString streamPosition: streamPosition
 		signal: aString;
 		yourself! !
 
-!STONCStyleCommentsSkipStreamTest methodsFor: 'testing'!
+!STONFileReference class methodsFor: 'ston'!
+fromSton: stonReader
+	^ stonReader parseListSingleton asFileReference.! !
+
+!STONTestCase methodsFor: 'as yet unclassified' stamp: 'jpb 5/2/2021 19:39:45'!
+newLinesWith: aString
+	"Provides an implementation for building lines together as it was done in pharo. There it's called #withCRs"
+	
+	^ aString collect: [ :c | c = $\ ifTrue: [ Character newLineCharacter ] ifFalse: [ c ]].! !
+
+!STONCStyleCommentsSkipStreamTest methodsFor: 'testing' stamp: 'jpb 5/2/2021 19:27:02'!
 testBlockReading
 	| input buffer |
 	input _ STONCStyleCommentsSkipStream on: 'abc/*comment*/def' readStream.
@@ -962,7 +860,8 @@ testBlockReading
 	self assert: (buffer copyFrom: 1 to: 4) equals: 'abcd'.
 	self assert: (input readInto: buffer startingAt: 5 count: 4) equals: 2.
 	self assert: buffer equals: 'abcdef'.
-	input _ STONCStyleCommentsSkipStream on: 'abc//comment\def' withCRs readStream.
+	
+	input _ STONCStyleCommentsSkipStream on: (self newLinesWith: 'abc//comment\def' ) readStream.
 	buffer _ String new: 6.
 	self assert: (input readInto: buffer startingAt: 1 count: 6) equals: 6.
 	self assert: buffer equals: 'abcdef'.
@@ -986,16 +885,20 @@ testCommentInString
 		assert: (STONCStyleCommentsSkipStream on: '{"foo":"//comment\"bar"}' readStream) upToEnd 
 		equals: '{"foo":"//comment\"bar"}'! !
 
-!STONCStyleCommentsSkipStreamTest methodsFor: 'testing'!
+!STONCStyleCommentsSkipStreamTest methodsFor: 'testing' stamp: 'jpb 5/2/2021 19:35:04'!
 testMultiLineComment
 	self 
-		assert: (STONCStyleCommentsSkipStream on: 'foo\//comment\bar' withCRs readStream) upToEnd 
-		equals: 'foo\bar' withCRs.
+		assert: (STONCStyleCommentsSkipStream 
+			on: (self newLinesWith: 'foo\//comment\bar') readStream) upToEnd 
+		equals: (self newLinesWith: 'foo\bar').
 	self 
-		assert: (STONCStyleCommentsSkipStream on: 'foo\//comment\bar' withCRs readStream) nextLine
+		assert: (STONCStyleCommentsSkipStream 
+			on: (self newLinesWith: 'foo\//comment\bar') readStream) nextLine
 		equals: 'foo'.
 	self 
-		assert: ((STONCStyleCommentsSkipStream on: 'foo\//comment\bar' withCRs readStream) nextLine; nextLine) 
+		assert: (
+			(STONCStyleCommentsSkipStream on: (self newLinesWith: 'foo\//comment\bar') readStream)
+				nextLine; nextLine) 
 		equals: 'bar'.
 	self assert: (STONCStyleCommentsSkipStream on: '//comment' readStream) atEnd.! !
 
@@ -1049,16 +952,16 @@ testCircular
 			STONJSON toString: foo ]
 		raise: STONWriterError! !
 
-!STONJSONTest methodsFor: 'tests'!
+!STONJSONTest methodsFor: 'tests' stamp: 'jpb 5/2/2021 19:43:22'!
 testFloats
 	self assert: (STONJSON toString: 1.0) equals: '1.0'.
 	self assert: (STONJSON toString: 0.0) equals: '0.0'.
 	self assert: (STONJSON toString: -1.0) equals: '-1.0'.
 	self assert: (STONJSON toString: -1.23456e-6) equals: '-1.23456e-6'.
-	self assert: ((STONJSON fromString: '1.0') closeTo: 1.0).
-	self assert: ((STONJSON fromString: '0.0') closeTo: 0.0).
-	self assert: ((STONJSON fromString: '-1.0') closeTo: -1.0).
-	self assert: ((STONJSON fromString: '-1.23456e-6') closeTo: -1.23456e-6).! !
+	self assert: ((STONJSON fromString: '1.0') = 1.0).
+	self assert: ((STONJSON fromString: '0.0') = 0.0).
+	self assert: ((STONJSON fromString: '-1.0') = -1.0).
+	self assert: ((STONJSON fromString: '-1.23456e-6') = -1.23456e-6).! !
 
 !STONJSONTest methodsFor: 'tests'!
 testIntegers
@@ -1094,17 +997,12 @@ testNull
 	self assert: (STONJSON toString: nil) equals: 'null'.
 	self assert: (STONJSON fromString: 'null') equals: nil.! !
 
-!STONJSONTest methodsFor: 'tests'!
+!STONJSONTest methodsFor: 'tests' stamp: 'jpb 5/2/2021 20:05:36'!
 testOrderedDictionary
 	| odictClass odict json dict |
-	odictClass _ Smalltalk at: #OrderedDictionary ifAbsent: [ ^ self skip ].
+	odictClass _ Smalltalk at: #OrderedDictionary.
 
 	odict _ odictClass newFrom: {('a' -> 42) . ('b' -> 1) . ('aa' -> 4) . ('c' -> 23)}.
-
-	"assert that the order is not equal in the dictionary hash table"
-	self
-		assertCollection: odict asArray hasSameElements: odict dictionary asArray;
-		deny: odict asArray equals: odict dictionary asArray.
 
 	"ordered presevered when encoding:"
 	json _ STONJSON toString: odict.
@@ -1112,11 +1010,9 @@ testOrderedDictionary
 
 	"lost when decoding"
 	dict _ STONJSON fromString: json.
-
-	self
-		assertCollection: dict asArray hasSameElements: odict asArray;
-		assert: dict equals: odict dictionary;
-		deny: dict asArray equals: odict asArray! !
+	
+	self assert: (dict asArray = odict asArray) not..
+	self assert: dict equals: odict.! !
 
 !STONJSONTest methodsFor: 'tests'!
 testShared
@@ -1127,18 +1023,15 @@ testShared
 			STONJSON toString: { foo. foo } ]
 		raise: STONWriterError! !
 
-!STONJSONTest methodsFor: 'tests'!
+!STONJSONTest methodsFor: 'tests' stamp: 'jpb 5/2/2021 20:07:00'!
 testStrings
 	self assert: (STONJSON toString: 'string') equals: '"string"'.
 	self assert: (STONJSON toString: '') equals: '""'.
 	self assert: (STONJSON toString: 'élèves français') equals: '"élèves français"'.
-	self assert: (STONJSON toString: String crlf) equals: '"\r\n"'.
+	self assert: (STONJSON toString: String newLineString) equals: '"\n"'.
 	self assert: (STONJSON fromString: '"string"') equals: 'string'.
 	self assert: (STONJSON fromString: '""') equals: ''.
-	self assert: (STONJSON fromString: '"élèves français"') equals: 'élèves français'.
-	self 
-		assert: (STONJSON fromString: '"\u212B \"Angstrom Symbol\""') 
-		equals: 8491 asCharacter asString, ' "Angstrom Symbol"'.! !
+	self assert: (STONJSON fromString: '"élèves français"') equals: 'élèves français'.! !
 
 !STONJSONTest methodsFor: 'tests'!
 testUnknown
@@ -1421,15 +1314,6 @@ testMetaclass
 	self assert: (self materialize: 'Metaclass[#Point]') equals: Point class! !
 
 !STONReaderTest methodsFor: 'tests'!
-testMimeType
-	self 
-		assert: (self materialize: 'MimeType[''application/json'']') 
-		equals: ZnMimeType applicationJson.
-	self 
-		assert: (self materialize: 'MimeType[''text/plain;charset=utf-8'']') 
-		equals: ZnMimeType textPlain.! !
-
-!STONReaderTest methodsFor: 'tests'!
 testMultiple
 	| reader |
 	reader _ STON reader 
@@ -1640,13 +1524,13 @@ materialize: string
 		on: string readStream;
 		next! !
 
-!STONTest methodsFor: 'tests'!
+!STONSingletonTest methodsFor: 'tests'!
 testFromString
 	| object |
 	object _ STON listClass withAll: {1 . 0 . -1 . true . false . nil}.
 	self assert: (STON fromString: '[1,0,-1,true,false,nil]') equals: object! !
 
-!STONTest methodsFor: 'tests'!
+!STONSingletonTest methodsFor: 'tests'!
 testFromStringWithComments
 	| object |
 	object _ STON listClass withAll: { 1. 0. -1. true. false. nil }.
@@ -1654,7 +1538,7 @@ testFromStringWithComments
 		assert: (STON fromStringWithComments: '// comment\[1, /* comment */ 0, -1, true, false, nil] // comment' withCRs)
 		equals: object! !
 
-!STONTest methodsFor: 'tests'!
+!STONSingletonTest methodsFor: 'tests'!
 testPrettyPrinting
 	| object |
 	object _ STONTestUser dummy.
@@ -1662,7 +1546,7 @@ testPrettyPrinting
 	object _ STONTestDomainObject dummy.
 	self assert: (STON fromString: (STON toStringPretty: object)) equals: object! !
 
-!STONTest methodsFor: 'tests'!
+!STONSingletonTest methodsFor: 'tests'!
 testRoomExitCycles
 	| model room1 room2 exit1 exit2 ston object |
 	(room1 _ STONTestMap new) at: #name put: 'Room 1'.
@@ -1692,13 +1576,13 @@ testRoomExitCycles
 	"Try writing again the parse model"
 	self assert: (STON toString: object) equals: ston! !
 
-!STONTest methodsFor: 'tests'!
+!STONSingletonTest methodsFor: 'tests'!
 testToString
 	| object |
 	object _ STON listClass withAll: {1 . 0 . -1 . true . false . nil}.
 	self assert: (STON toString: object) equals: '[1,0,-1,true,false,nil]'! !
 
-!STONTest class methodsFor: 'utilities'!
+!STONSingletonTest class methodsFor: 'utilities'!
 fastReadFromFileNamed: path
 	^ path asFileReference
 		readStreamDo: [ :stream | 
@@ -1707,7 +1591,7 @@ fastReadFromFileNamed: path
 				optimizeForLargeStructures;
 				next ]! !
 
-!STONTest class methodsFor: 'utilities'!
+!STONSingletonTest class methodsFor: 'utilities'!
 fastWrite: object toFileNamed: path
 	^ path asFileReference
 		writeStreamDo: [ :fileStream | 
@@ -1719,7 +1603,7 @@ fastWrite: object toFileNamed: path
 						optimizeForLargeStructures;
 						nextPut: object ] ]! !
 
-!STONTest class methodsFor: 'utilities'!
+!STONSingletonTest class methodsFor: 'utilities'!
 readFromFileNamed: path
 	^ path asFileReference
 		readStreamDo: [ :stream | 
@@ -1727,7 +1611,7 @@ readFromFileNamed: path
 				on: stream;
 				next ]! !
 
-!STONTest class methodsFor: 'utilities'!
+!STONSingletonTest class methodsFor: 'utilities'!
 write: object toFileNamed: path
 	^ path asFileReference
 		writeStreamDo: [ :stream | 
@@ -1759,7 +1643,7 @@ testClasses
 	classes _ STON listClass withAll: { Class. Metaclass. Class class. Point class class }.
 	self serializeAndMaterialize: classes.! !
 
-!STONWriteReadTest methodsFor: 'tests'!
+!STONWriteReadTest methodsFor: 'tests' stamp: 'jpb 5/2/2021 20:09:42'!
 testCollections
 	| collections |
 	collections _ STON listClass withAll: {
@@ -1770,7 +1654,7 @@ testCollections
 		Dictionary new at: 1 put: 1; at: 2 put: 2; yourself.
 		#[1 2 3].
 		#(1 2 3) asIntegerArray.
-		#(1 2 3) asFloatArray }.
+		#(1 2 3) asFloat64Array }.
 	self serializeAndMaterialize: collections! !
 
 !STONWriteReadTest methodsFor: 'tests'!
@@ -1934,15 +1818,6 @@ testKnownObjects
 	STONTestKnownObject resetKnownObjects! !
 
 !STONWriteReadTest methodsFor: 'tests'!
-testMimeTypes
-	| mimeTypes |
-	mimeTypes _ STON listClass withAll: { 
-		ZnMimeType applicationJson.
-		ZnMimeType textPlain }.
-	self serializeAndMaterialize: mimeTypes
-! !
-
-!STONWriteReadTest methodsFor: 'tests'!
 testOrderedDictionary
 	"OrderedDictionary is special because it does not inherit from Dictionary.
 	It might also not exist in some dialects, where this test could be skipped."
@@ -1979,19 +1854,6 @@ testSharedColors
 	colors _ STON listClass withAll: { color1. color2. color2 }.
 	self serializeAndMaterialize: colors
 ! !
-
-!STONWriteReadTest methodsFor: 'tests'!
-testSmallDictionary
-	"SmallDictionary is special because it does not inherit from Dictionary.
-	It might also not exist in some dialects, where this test could be skipped."
-	
-	| dictionaries smallDictionaryClass |
-	smallDictionaryClass _ self environment at: #SmallDictionary ifAbsent: [ Dictionary ].
-	dictionaries _ STON listClass withAll: {
-		smallDictionaryClass new at: 1 put: 1; at: 2 put: 2; yourself.
-		smallDictionaryClass new at: 1 put: 1; at: 2 put: 2; yourself.
-		smallDictionaryClass new }.
-	self serializeAndMaterialize: dictionaries! !
 
 !STONWriteReadTest methodsFor: 'tests'!
 testSmallIntegers
@@ -2055,15 +1917,6 @@ testURLs
 		'scheme://user:password@host:123/var/log/system.log?foo=1&bar#frag' asUrl }.
 	self serializeAndMaterialize: urls
 ! !
-
-!STONWriteReadTest methodsFor: 'tests'!
-testUUIDs
-	| uuids |
-	uuids _ STON listClass withAll: { 
-		UUID new.
-		UUID new.
-		UUID nilUUID }.
-	self serializeAndMaterialize: uuids! !
 
 !STONWriteReadTest methodsFor: 'tests'!
 testUser
@@ -2278,17 +2131,17 @@ testColor
 		equals: 'Color{#red:1.0,#green:0.061,#blue:0.061,#alpha:1.0}'.
 ! !
 
-!STONWriterTest methodsFor: 'tests'!
+!STONWriterTest methodsFor: 'tests' stamp: 'jpb 5/2/2021 19:35:55'!
 testCustomNewline
 	| output |
 	output _ String streamContents: [ :out |
 		(STON writer on: out)
-			newLine: String lf;
+			newLine: String newLineString ;
 			prettyPrint: true;
 			nextPut: #( 1 ) ].
 	self 
 		assert: output 
-		equals: ('[\	1\]' withCRs replaceAll: Character cr with: Character lf)! !
+		equals: (self newLinesWith: '[\	1\]')! !
 
 !STONWriterTest methodsFor: 'tests'!
 testDate
@@ -2448,15 +2301,6 @@ testMap
 !STONWriterTest methodsFor: 'tests'!
 testMetaclass
 	self assert: (self serialize: Point class) equals: 'Metaclass[#Point]'! !
-
-!STONWriterTest methodsFor: 'tests'!
-testMimeType
-	self
-		assert: (self serialize: ZnMimeType applicationJson)
-		equals: 'MimeType[''application/json'']'.
-	self
-		assert: (self serialize: ZnMimeType textPlain)
-		equals: 'MimeType[''text/plain;charset=utf-8'']'.! !
 
 !STONWriterTest methodsFor: 'tests'!
 testNil
@@ -2629,17 +2473,6 @@ testUserNil
 	| user |
 	user _ STONTestUser new.
 	self assert: (self serialize: user) equals: 'TestUser{#enabled:true}'! !
-
-!STONFileReference class methodsFor: 'ston'!
-fromSton: stonReader
-	^ stonReader parseListSingleton asFileReference.! !
-
-!Path class methodsFor: '*ston-core'!
-fromSton: stonReader
-	| elements |
-	elements _ Array streamContents: [ :out |
-		stonReader parseListDo: [ :each | out nextPut: each ] ].
-	^ self withAll: elements! !
 
 !STON class methodsFor: 'accessing'!
 associationClass
@@ -3066,16 +2899,16 @@ parseEscapedCharacter
 	self error: 'invalid escape character \' , (String with: char).
 	^ char! !
 
-!STONReader methodsFor: 'parsing-internal'!
+!STONReader methodsFor: 'parsing-internal' stamp: 'jpb 5/2/2021 18:51:29'!
 parseNumber
 	| negated number |
 	negated _ readStream peekFor: $-.
 	number _ self parseNumberInteger.
+	
 	(readStream peekFor: $/)
 		ifTrue: [ 
 			number _ Fraction numerator: number denominator: self parseNumberInteger.
-			(readStream peekFor: $s)
-				ifTrue: [ number _ ScaledDecimal newFromNumber: number scale: self parseNumberInteger ] ]
+		]
 		ifFalse: [ 
 			(readStream peekFor: $.)
 				ifTrue: [ number _ number + self parseNumberFraction ].
@@ -3083,6 +2916,7 @@ parseNumber
 				ifTrue: [ number _ number * self parseNumberExponent ] ].
 	negated
 		ifTrue: [ number _ number negated ].
+
 	self consumeWhitespace.
 	^ number! !
 
@@ -3192,13 +3026,13 @@ convertNewLines: boolean
 	
 	convertNewLines _ boolean! !
 
-!STONReader methodsFor: 'initialize-release'!
+!STONReader methodsFor: 'initialize-release' stamp: 'jpb 5/2/2021 19:37:51'!
 initialize
 	super initialize.
 	objects _ IdentityDictionary new.
 	classes _ IdentityDictionary new.
 	acceptUnknownClasses _ convertNewLines _ false.
-	newLine _ String cr.
+	newLine _ String newLineString.
 	unresolvedReferences _ 0! !
 
 !STONReader methodsFor: 'initialize-release'!
@@ -3378,17 +3212,20 @@ parseList
 	self setReference: reference to: array.
 	^ array! !
 
-!STONReader methodsFor: 'parsing'!
+!STONReader methodsFor: 'parsing' stamp: 'jpb 5/2/2021 19:54:21'!
 parseListDo: block
 	| index |
 	self expectChar: $[.
 	(self matchChar: $]) ifTrue: [ ^ self ]. "short cut for empty lists"
 	index _ 1.
+	
 	[ readStream atEnd ] whileFalse: [
-		block cull: self parseValue cull: index.
+		block valueWithPossibleArgs: {self parseValue.  index}.
+		
 		(self matchChar: $]) ifTrue: [ ^ self ].
 		index _ index + 1.
 		self expectChar: $, ].
+	
 	self error: 'end of list expected'! !
 
 !STONReader methodsFor: 'parsing'!
@@ -3840,10 +3677,11 @@ indentedDo: block
 	block value.
 	level _ level - 1! !
 
-!STONWriter methodsFor: 'private'!
+!STONWriter methodsFor: 'private' stamp: 'jpb 5/2/2021 20:08:05'!
 isSimpleSymbol: symbol
-	(symbol isEmpty or: [ symbol isWideString ]) 
+	symbol isEmpty 
 		ifTrue: [ ^ false ].
+		
 	^ (symbol class 
 		findFirstInString: symbol 
 		inSet: STONSimpleSymbolCharacters 
@@ -3914,22 +3752,21 @@ close
 		writeStream close.
 		writeStream _ nil ]! !
 
-!STONWriter methodsFor: 'initialize-release'!
+!STONWriter methodsFor: 'initialize-release' stamp: 'jpb 5/2/2021 19:37:38'!
 escape: char with: anObject
 	"Instruct me to escape char with object, either a replacement string or #pass"
 	
 	"self escape: $/ with: '\/'."
 	
 	self assert: (anObject isString | (anObject == #pass)).
-	self assert: char isOctetCharacter.
 	self writeableStonCharacters at: char codePoint + 1 put: anObject! !
 
-!STONWriter methodsFor: 'initialize-release'!
+!STONWriter methodsFor: 'initialize-release' stamp: 'jpb 5/2/2021 19:36:24'!
 initialize
 	super initialize.
 	stonCharacters _ STONCharacters.
 	prettyPrint _ false.
-	newLine _ String cr.
+	newLine _ String newLineString.
 	level _ 0.
 	referencePolicy _ #normal.
 	jsonMode _ keepNewLines _ asciiOnly _ false.
@@ -4034,24 +3871,6 @@ on: writeStream
 	^ self new
 		on: writeStream;
 		yourself! !
-
-!SmallDictionary class methodsFor: '*ston-core'!
-fromSton: stonReader
-	"My instances are stored as maps."
-	
-	| dictionary |
-	dictionary _ self new.
-	stonReader parseMapDo: [ :key :value |
-		dictionary at: key put: value ].
-	^ dictionary! !
-
-!ZnMimeType class methodsFor: '*ston-core'!
-fromSton: stonReader
-	^ self fromString: stonReader parseListSingleton! !
-
-!ZnUrl class methodsFor: '*ston-core'!
-fromSton: stonReader
-	^ self fromString: stonReader parseListSingleton ! !
 
 !STONTestDomainObject methodsFor: 'comparing'!
 = anObject
@@ -4409,16 +4228,9 @@ stonOn: stonWriter
 stonContainSubObjects
 	^ false! !
 
-!Color methodsFor: '*ston-core'!
+!Color methodsFor: '*ston-core' stamp: 'jpb 5/2/2021 19:19:01'!
 stonOn: stonWriter
-	| name |
-	(self isTranslucent or: [ (name _ self name) = #unnamed ])
-		ifTrue: [ 
-			stonWriter writeObject: self streamMap: [ :map |
-				#(red green blue alpha) do: [ :each | 
-					map at: each put: ((self perform: each) roundTo: 0.001) ] ] ]
-		ifFalse: [ 
-			stonWriter writeObject: self listSingleton: name ]! !
+	stonWriter writeObject: self listSingleton: self name! !
 
 !Color class methodsFor: '*ston-core'!
 fromSton: stonReader
@@ -4456,28 +4268,28 @@ stonOn: stonWriter
 		writeObject: self 
 		listSingleton: self name asSymbol! !
 
-!Class class methodsFor: '*ston-core'!
+!Class class methodsFor: '*ston-core' stamp: 'jpb 5/2/2021 20:10:10'!
 fromSton: stonReader
 	| theClassName theClass |
 	theClassName _ stonReader parseListSingleton.
-	theClass _ self environment at: theClassName.
+	theClass _ Smalltalk at: theClassName.
 	^ theClass! !
 
 !Metaclass methodsFor: '*ston-core'!
 stonName
 	^ #Class! !
 
-!Metaclass methodsFor: '*ston-core'!
+!Metaclass methodsFor: '*ston-core' stamp: 'jpb 5/2/2021 20:13:16'!
 stonOn: stonWriter
 	stonWriter
 		writeObject: self 
-		listSingleton: self instanceSide name asSymbol! !
+		listSingleton: self soleInstance name asSymbol! !
 
-!Metaclass class methodsFor: '*ston-core'!
+!Metaclass class methodsFor: '*ston-core' stamp: 'jpb 5/2/2021 20:13:37'!
 fromSton: stonReader
 	| theClassName theClass theMetaclass |
 	theClassName _ stonReader parseListSingleton.
-	theClass _ self environment at: theClassName.
+	theClass _ Smalltalk at: theClassName.
 	theMetaclass _ theClass class.
 	^ theMetaclass! !
 
@@ -4501,13 +4313,12 @@ stonOn: stonWriter
 stonContainSubObjects 
 	^ false! !
 
-!DateAndTime methodsFor: '*ston-core'!
+!DateAndTime methodsFor: '*ston-core' stamp: 'jpb 5/2/2021 19:21:41'!
 stonOn: stonWriter
 	"Use an ISO representation with all details YYYY-MM-DDTHH:MM:SS.N+TZ (with optional nanoseconds and timezone offset)"
 	
 	stonWriter writeObject: self listSingleton: 
-		(String streamContents: [ :stream |
-			self printOn: stream withLeadingSpace: false ])! !
+		(String streamContents: [ :stream | self printOn: stream  ])! !
 
 !DateAndTime class methodsFor: '*ston-core'!
 fromSton: stonReader
@@ -4548,27 +4359,16 @@ fromSton: stonReader
 stonContainSubObjects 
 	^ false! !
 
-!Date methodsFor: '*ston-core'!
+!Date methodsFor: '*ston-core' stamp: 'jpb 5/2/2021 19:21:12'!
 stonOn: stonWriter
 	"Use an ISO style YYYY-MM-DD representation.
 	Since my current implementation is time zone offset sensitive, the offset has to be included."
 
 	| representation |
-	representation _ self offset isZero
-		ifTrue: [ 
-			String new: 11 streamContents: [ :out | 
+	representation _ 			String streamContents: [ :out | 
 				self printOn: out format: #(3 2 1 $- 1 1 2).
-				out nextPut: $Z ] ]
-		ifFalse: [ 
-			String new: 32 streamContents: [ :out | 
-				self printOn: out format: #(3 2 1 $- 1 1 2).
-				out nextPut: (self offset positive ifTrue: [ $+ ] ifFalse: [ $- ]).
-				self offset hours abs printOn: out base: 10 length: 2 padded: true.
-				out nextPut: $:.
-				self offset minutes abs printOn: out base: 10 length: 2 padded: true.
-				self offset seconds = 0 
-					ifFalse:[ 
-						out nextPut: $:; print: self offset seconds abs truncated ] ] ].
+				out nextPut: $Z ].
+						
 	stonWriter writeObject: self listSingleton: representation! !
 
 !Date class methodsFor: '*ston-core'!
@@ -4753,6 +4553,34 @@ fromSton: stonReader
 	stonReader parseMapDo: [ :key :value |
 		dictionary at: key put: value ].
 	^ dictionary! !
+
+!FileEntry methodsFor: '*ston-core' stamp: 'jpb 5/2/2021 19:04:30'!
+isStonRunningInDiskFileSystem
+	^true! !
+
+!FileEntry methodsFor: '*ston-core' stamp: 'jpb 5/2/2021 19:06:33'!
+isStonRunningInWorkingDirectory
+	^DirectoryEntry currentDirectory = self asString asDirectoryEntry ! !
+
+!FileEntry methodsFor: '*ston-core' stamp: 'jpb 5/2/2021 19:07:17'!
+stonContainSubObjects
+	^ false! !
+
+!FileEntry methodsFor: '*ston-core' stamp: 'jpb 5/2/2021 19:04:14'!
+stonOn: stonWriter
+	self isStonRunningInDiskFileSystem
+		ifTrue: [ | diskFilePath |
+			"in order to get $/ as delimiter and $. as working directory on all platforms"
+			diskFilePath _ self isStonRunningInWorkingDirectory
+				ifTrue: [ '.' ]
+				ifFalse: [ self asString ].
+				
+			stonWriter 
+				writeObject: self 
+				named: STONFileReference stonName 
+				listSingleton: diskFilePath ]
+		ifFalse: [ 
+			super stonOn: stonWriter ]! !
 
 !Point methodsFor: '*ston-core'!
 fromSton: stonReader
