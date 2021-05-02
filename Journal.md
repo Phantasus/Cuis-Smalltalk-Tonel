@@ -42,6 +42,12 @@ And the actual commit message, based on the above commit hash was:
 I record that here, so that people can extract the actual AUTHORs
 information and put the rest together.
 
+I tried to grep for anything related to tonel in the `src/` directory
+of the pharo repository, but I did not find it, it seems that it's
+somehow downloaded and packed into the image at some later point.
+Finding the actual code authors of the particular tonel parts
+for inclusion in the `AUTHORS.md` is now an odysee.
+
 
 # 18. May 2020 (jpb)
 
