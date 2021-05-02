@@ -48,6 +48,16 @@ somehow downloaded and packed into the image at some later point.
 Finding the actual code authors of the particular tonel parts
 for inclusion in the `AUTHORS.md` is now an odysee.
 
+Added for porting efforts the STON reader classes, as someone really
+needed a serialization format, which only Smalltalks could read:
+
+Ran over these files the sha256sum:
+
+> 17867a30c5b3ddb4d7b5addc7e63e1716d177cbf00a834f41b3fd224385b4566  References/STON-Core.st
+> d0762bbaead62dcec0981630815a9829b4ce967a1c7488afd5c4b396885d793c  References/STON-Tests.st
+> 3c6d14881ad439c7379ba65022ef042ed0a7e14ed79f74d05a89cc972ac5038e  References/STON-Text support.st
+
+
 
 # 18. May 2020 (jpb)
 
